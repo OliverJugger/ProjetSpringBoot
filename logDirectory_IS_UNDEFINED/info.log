@@ -1,0 +1,763 @@
+2020-07-17 16:13:30 - Starting MainApplication on LFR018342 with PID 14608 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:13:30 - The following profiles are active: dev
+2020-07-17 16:13:32 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:13:32 - Finished Spring Data repository scanning in 77ms. Found 1 repository interfaces.
+2020-07-17 16:13:33 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a065ed84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:13:34 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:13:34 - Root WebApplicationContext: initialization completed in 4520 ms
+2020-07-17 16:13:35 - HikariPool-1 - Starting...
+2020-07-17 16:13:35 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:13:37 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:13:37 - HikariPool-1 - Start completed.
+2020-07-17 16:13:37 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:13:37 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:13:37 - HHH000206: hibernate.properties not found
+2020-07-17 16:13:37 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:13:37 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:13:39 - GenerationTarget encountered exception accepting command : Error executing DDL "drop table utilisateur" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "drop table utilisateur" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:241)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at fr.capgemini.interco.MainApplication.main(MainApplication.java:39)
+Caused by: java.sql.SQLSyntaxErrorException: Schema 'SA' does not exist
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 34 common frames omitted
+Caused by: org.apache.derby.iapi.error.StandardException: Schema 'SA' does not exist
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.sql.catalog.DataDictionaryImpl.getSchemaDescriptor(Unknown Source)
+	at org.apache.derby.iapi.sql.StatementUtil.getSchemaDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.QueryTreeNode.getSchemaDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.QueryTreeNode.getSchemaDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DDLStatementNode.justGetDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DDLStatementNode.getTableDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DDLStatementNode.getTableDescriptor(Unknown Source)
+	at org.apache.derby.impl.sql.compile.DropTableNode.bindStatement(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(Unknown Source)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(Unknown Source)
+	... 39 common frames omitted
+2020-07-17 16:13:39 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@500ec769'
+2020-07-17 16:13:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:13:40 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+2020-07-17 16:13:40 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:13:40 - HikariPool-1 - Shutdown initiated...
+2020-07-17 16:13:40 - HikariPool-1 - Shutdown completed.
+2020-07-17 16:13:40 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-17 16:13:40 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at fr.capgemini.interco.MainApplication.main(MainApplication.java:39)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 32 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:82)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:208)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:119)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 43 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property visible found for type Utilisateur!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:76)
+	... 69 common frames omitted
+2020-07-17 16:14:07 - Starting MainApplication on LFR018342 with PID 10116 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:14:07 - The following profiles are active: dev
+2020-07-17 16:14:09 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:14:09 - Finished Spring Data repository scanning in 111ms. Found 1 repository interfaces.
+2020-07-17 16:14:10 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d8ecaeb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:14:11 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:14:11 - Root WebApplicationContext: initialization completed in 4497 ms
+2020-07-17 16:14:12 - HikariPool-1 - Starting...
+2020-07-17 16:14:12 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:14:13 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:14:13 - HikariPool-1 - Start completed.
+2020-07-17 16:14:13 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:14:13 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:14:13 - HHH000206: hibernate.properties not found
+2020-07-17 16:14:14 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:14:14 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:14:16 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44aeae34'
+2020-07-17 16:14:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:14:16 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+2020-07-17 16:14:16 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:14:16 - HikariPool-1 - Shutdown initiated...
+2020-07-17 16:14:16 - HikariPool-1 - Shutdown completed.
+2020-07-17 16:14:16 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-17 16:14:16 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at fr.capgemini.interco.MainApplication.main(MainApplication.java:39)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 32 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:82)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:208)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:119)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 43 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property visible found for type Utilisateur!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:76)
+	... 69 common frames omitted
+2020-07-17 16:15:43 - Starting MainApplication on LFR018342 with PID 12360 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:15:43 - The following profiles are active: dev
+2020-07-17 16:15:45 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:15:45 - Finished Spring Data repository scanning in 97ms. Found 1 repository interfaces.
+2020-07-17 16:15:46 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46914bf1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:15:47 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:15:47 - Root WebApplicationContext: initialization completed in 4172 ms
+2020-07-17 16:15:48 - HikariPool-1 - Starting...
+2020-07-17 16:15:48 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:15:49 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:15:49 - HikariPool-1 - Start completed.
+2020-07-17 16:15:49 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:15:49 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:15:49 - HHH000206: hibernate.properties not found
+2020-07-17 16:15:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:15:50 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:15:51 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7da77305'
+2020-07-17 16:15:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:15:52 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+2020-07-17 16:15:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:15:52 - HikariPool-1 - Shutdown initiated...
+2020-07-17 16:15:52 - HikariPool-1 - Shutdown completed.
+2020-07-17 16:15:52 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-17 16:15:52 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurControler': Unsatisfied dependency expressed through method 'setCorrectionService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at fr.capgemini.interco.MainApplication.main(MainApplication.java:39)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'utilisateurService' defined in file [C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes\fr\capgemini\interco\service\UtilisateurService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilisateurRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 32 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List fr.capgemini.interco.repository.UtilityRepository.findByVisible(char)! No property visible found for type Utilisateur!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:82)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:208)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:119)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 43 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property visible found for type Utilisateur!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:76)
+	... 69 common frames omitted
+2020-07-17 16:16:43 - Starting MainApplication on LFR018342 with PID 20508 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:16:43 - The following profiles are active: dev
+2020-07-17 16:16:45 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:16:45 - Finished Spring Data repository scanning in 110ms. Found 1 repository interfaces.
+2020-07-17 16:16:45 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6298c94e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:16:47 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:16:47 - Root WebApplicationContext: initialization completed in 4153 ms
+2020-07-17 16:16:48 - HikariPool-1 - Starting...
+2020-07-17 16:16:48 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:16:48 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:16:48 - HikariPool-1 - Start completed.
+2020-07-17 16:16:48 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:16:49 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:16:49 - HHH000206: hibernate.properties not found
+2020-07-17 16:16:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:16:49 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:16:50 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5aa7cfdf'
+2020-07-17 16:16:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:16:52 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 16:16:52 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 16:16:52 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'api' defined in class path resource [fr/capgemini/interco/config/SwaggerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.spring.web.plugins.Docket]: Factory method 'api' threw exception; nested exception is java.lang.NullPointerException
+2020-07-17 16:16:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:16:52 - HikariPool-1 - Shutdown initiated...
+2020-07-17 16:16:52 - HikariPool-1 - Shutdown completed.
+2020-07-17 16:16:52 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-17 16:16:52 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'api' defined in class path resource [fr/capgemini/interco/config/SwaggerConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.spring.web.plugins.Docket]: Factory method 'api' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at fr.capgemini.interco.MainApplication.main(MainApplication.java:39)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [springfox.documentation.spring.web.plugins.Docket]: Factory method 'api' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:770)
+	at com.google.common.collect.Lists.newArrayList(Lists.java:144)
+	at springfox.documentation.service.ApiInfo.<init>(ApiInfo.java:75)
+	at fr.capgemini.interco.config.SwaggerConfig.apiInfo(SwaggerConfig.java:39)
+	at fr.capgemini.interco.config.SwaggerConfig.api(SwaggerConfig.java:34)
+	at fr.capgemini.interco.config.SwaggerConfig$$EnhancerBySpringCGLIB$$8ced5682.CGLIB$api$0(<generated>)
+	at fr.capgemini.interco.config.SwaggerConfig$$EnhancerBySpringCGLIB$$8ced5682$$FastClassBySpringCGLIB$$c70f408f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at fr.capgemini.interco.config.SwaggerConfig$$EnhancerBySpringCGLIB$$8ced5682.api(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2020-07-17 16:29:14 - Starting MainApplication on LFR018342 with PID 20600 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:29:14 - The following profiles are active: dev
+2020-07-17 16:29:16 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:29:16 - Finished Spring Data repository scanning in 122ms. Found 1 repository interfaces.
+2020-07-17 16:29:17 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$825d3463] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:29:18 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:29:18 - Root WebApplicationContext: initialization completed in 4423 ms
+2020-07-17 16:29:19 - HikariPool-1 - Starting...
+2020-07-17 16:29:19 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:29:20 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:29:20 - HikariPool-1 - Start completed.
+2020-07-17 16:29:20 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:29:20 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:29:20 - HHH000206: hibernate.properties not found
+2020-07-17 16:29:21 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:29:21 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:29:23 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@42f9873e'
+2020-07-17 16:29:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:29:24 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 16:29:24 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 16:29:25 - Context refreshed
+2020-07-17 16:29:25 - Found 1 custom documentation plugin(s)
+2020-07-17 16:29:25 - Scanning for api listing references
+2020-07-17 16:29:25 - Generating unique operation named: handleUsingGET_1
+2020-07-17 16:29:25 - Generating unique operation named: handleUsingGET_2
+2020-07-17 16:29:25 - Generating unique operation named: handleUsingGET_3
+2020-07-17 16:29:25 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 16:29:25 - Started MainApplication in 12.21 seconds (JVM running for 13.353)
+2020-07-17 16:29:49 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 16:29:49 - Completed initialization in 74 ms
+2020-07-17 16:29:49 - No mapping for GET /
+2020-07-17 16:29:50 - No mapping for GET /favicon.ico
+2020-07-17 16:29:59 - No mapping for GET /utilisateur/all
+2020-07-17 16:30:35 - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-17 16:35:56 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2020-07-17 16:41:31 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2020-07-17 16:42:21 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `fr.capgemini.interco.domain.Utilisateur` out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `fr.capgemini.interco.domain.Utilisateur` out of START_ARRAY token
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2020-07-17 16:50:31 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-07-17 16:52:18 - Starting MainApplication on LFR018342 with PID 13916 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:52:18 - The following profiles are active: dev
+2020-07-17 16:52:23 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:52:23 - Finished Spring Data repository scanning in 343ms. Found 1 repository interfaces.
+2020-07-17 16:52:26 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e82c10eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:52:28 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:52:28 - Root WebApplicationContext: initialization completed in 10182 ms
+2020-07-17 16:52:30 - HikariPool-1 - Starting...
+2020-07-17 16:52:30 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:52:31 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:52:31 - HikariPool-1 - Start completed.
+2020-07-17 16:52:32 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:52:32 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:52:32 - HHH000206: hibernate.properties not found
+2020-07-17 16:52:33 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:52:33 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:52:36 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@65698020'
+2020-07-17 16:52:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:52:39 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 16:52:39 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 16:52:40 - Context refreshed
+2020-07-17 16:52:40 - Found 1 custom documentation plugin(s)
+2020-07-17 16:52:40 - Scanning for api listing references
+2020-07-17 16:52:40 - Generating unique operation named: handleUsingGET_1
+2020-07-17 16:52:40 - Generating unique operation named: handleUsingGET_2
+2020-07-17 16:52:40 - Generating unique operation named: handleUsingGET_3
+2020-07-17 16:52:41 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 16:52:41 - Started MainApplication in 25.31 seconds (JVM running for 28.386)
+2020-07-17 16:52:52 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 16:52:52 - Completed initialization in 27 ms
+2020-07-17 16:53:10 - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-17 16:54:04 - Starting MainApplication on LFR018342 with PID 21672 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:54:04 - The following profiles are active: dev
+2020-07-17 16:54:06 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:54:06 - Finished Spring Data repository scanning in 125ms. Found 1 repository interfaces.
+2020-07-17 16:54:07 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9efb7b84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:54:09 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:54:09 - Root WebApplicationContext: initialization completed in 5419 ms
+2020-07-17 16:54:11 - HikariPool-1 - Starting...
+2020-07-17 16:54:11 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:54:12 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:54:12 - HikariPool-1 - Start completed.
+2020-07-17 16:54:12 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:54:12 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:54:12 - HHH000206: hibernate.properties not found
+2020-07-17 16:54:12 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:54:12 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:54:14 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@349f3ff7'
+2020-07-17 16:54:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:54:16 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 16:54:16 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 16:54:17 - Context refreshed
+2020-07-17 16:54:17 - Found 1 custom documentation plugin(s)
+2020-07-17 16:54:17 - Scanning for api listing references
+2020-07-17 16:54:17 - Generating unique operation named: handleUsingGET_1
+2020-07-17 16:54:17 - Generating unique operation named: handleUsingGET_2
+2020-07-17 16:54:17 - Generating unique operation named: handleUsingGET_3
+2020-07-17 16:54:17 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 16:54:17 - Started MainApplication in 14.019 seconds (JVM running for 15.42)
+2020-07-17 16:54:19 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 16:54:19 - Completed initialization in 17 ms
+2020-07-17 16:54:19 - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-17 16:55:38 - Starting MainApplication on LFR018342 with PID 14880 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:55:38 - The following profiles are active: dev
+2020-07-17 16:55:40 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 16:55:40 - Finished Spring Data repository scanning in 104ms. Found 1 repository interfaces.
+2020-07-17 16:55:41 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d242008a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 16:55:42 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 16:55:43 - Root WebApplicationContext: initialization completed in 4914 ms
+2020-07-17 16:55:44 - HikariPool-1 - Starting...
+2020-07-17 16:55:44 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 16:55:44 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 16:55:44 - HikariPool-1 - Start completed.
+2020-07-17 16:55:44 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 16:55:44 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 16:55:44 - HHH000206: hibernate.properties not found
+2020-07-17 16:55:45 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 16:55:45 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 16:55:47 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b86cb18'
+2020-07-17 16:55:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 16:55:48 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 16:55:48 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 16:55:49 - Context refreshed
+2020-07-17 16:55:49 - Found 1 custom documentation plugin(s)
+2020-07-17 16:55:49 - Scanning for api listing references
+2020-07-17 16:55:49 - Generating unique operation named: handleUsingGET_1
+2020-07-17 16:55:49 - Generating unique operation named: handleUsingGET_2
+2020-07-17 16:55:49 - Generating unique operation named: handleUsingGET_3
+2020-07-17 16:55:49 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 16:55:49 - Started MainApplication in 12.753 seconds (JVM running for 13.971)
+2020-07-17 16:56:07 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 16:56:07 - Completed initialization in 32 ms
+2020-07-17 16:56:07 - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-17 16:59:59 - Starting MainApplication on LFR018342 with PID 20936 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 16:59:59 - The following profiles are active: dev
+2020-07-17 17:00:01 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 17:00:01 - Finished Spring Data repository scanning in 88ms. Found 1 repository interfaces.
+2020-07-17 17:00:02 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d7e61f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 17:00:03 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 17:00:04 - Root WebApplicationContext: initialization completed in 4992 ms
+2020-07-17 17:00:05 - HikariPool-1 - Starting...
+2020-07-17 17:00:05 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 17:00:05 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 17:00:05 - HikariPool-1 - Start completed.
+2020-07-17 17:00:05 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 17:00:06 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 17:00:06 - HHH000206: hibernate.properties not found
+2020-07-17 17:00:06 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 17:00:06 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 17:00:08 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@16df9bde'
+2020-07-17 17:00:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 17:00:09 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 17:00:09 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 17:00:10 - Context refreshed
+2020-07-17 17:00:10 - Found 1 custom documentation plugin(s)
+2020-07-17 17:00:10 - Scanning for api listing references
+2020-07-17 17:00:10 - Generating unique operation named: handleUsingGET_1
+2020-07-17 17:00:10 - Generating unique operation named: handleUsingGET_2
+2020-07-17 17:00:10 - Generating unique operation named: handleUsingGET_3
+2020-07-17 17:00:10 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 17:00:10 - Started MainApplication in 12.562 seconds (JVM running for 13.773)
+2020-07-17 17:00:31 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 17:00:31 - Completed initialization in 25 ms
+2020-07-17 17:00:31 - HHH000397: Using ASTQueryTranslatorFactory
+2020-07-17 17:01:35 - Starting MainApplication on LFR018342 with PID 10544 (C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot\target\classes started by omignot in C:\Users\omignot\eclipse-workspace-notsirhen\projetSpringBoot)
+2020-07-17 17:01:35 - The following profiles are active: dev
+2020-07-17 17:01:38 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-17 17:01:38 - Finished Spring Data repository scanning in 88ms. Found 1 repository interfaces.
+2020-07-17 17:01:39 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b57d8c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-17 17:01:40 - Tomcat initialized with port(s): 8081 (http)
+2020-07-17 17:01:40 - Root WebApplicationContext: initialization completed in 4990 ms
+2020-07-17 17:01:42 - HikariPool-1 - Starting...
+2020-07-17 17:01:42 - Registered driver with driverClassName=org.apache.derby.jdbc.EmbeddedDriver was not found, trying direct instantiation.
+2020-07-17 17:01:42 - HikariPool-1 - Driver does not support get/set network timeout for connections. (Feature not implemented: No details.)
+2020-07-17 17:01:42 - HikariPool-1 - Start completed.
+2020-07-17 17:01:43 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-17 17:01:43 - HHH000412: Hibernate Core {5.3.7.Final}
+2020-07-17 17:01:43 - HHH000206: hibernate.properties not found
+2020-07-17 17:01:44 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-17 17:01:44 - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2020-07-17 17:01:46 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@460f1cdb'
+2020-07-17 17:01:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-17 17:01:47 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-17 17:01:47 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-17 17:01:49 - Context refreshed
+2020-07-17 17:01:49 - Found 1 custom documentation plugin(s)
+2020-07-17 17:01:49 - Scanning for api listing references
+2020-07-17 17:01:49 - Generating unique operation named: handleUsingGET_1
+2020-07-17 17:01:49 - Generating unique operation named: handleUsingGET_2
+2020-07-17 17:01:49 - Generating unique operation named: handleUsingGET_3
+2020-07-17 17:01:50 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-17 17:01:50 - Started MainApplication in 15.411 seconds (JVM running for 16.633)
+2020-07-17 17:01:56 - Initializing Servlet 'dispatcherServlet'
+2020-07-17 17:01:56 - Completed initialization in 25 ms
+2020-07-17 17:01:57 - HHH000397: Using ASTQueryTranslatorFactory
